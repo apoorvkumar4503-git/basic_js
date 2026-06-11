@@ -1,6 +1,6 @@
 
-let a = parseInt(process.argv[2]);
-let b = parseInt(process.argv[3]);
+let a = Number(prompt("enter a number: "));
+let b = Number(prompt("enter a number: "));
 
 let sum = a + b;
 let difference = a - b;
