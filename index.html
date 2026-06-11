@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🌤️ Weather Dashboard</h1>
+            <p class="subtitle">Get real-time weather information</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    class="city-input" 
+                    placeholder="Enter city name..."
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="search-btn">Search</button>
+            </div>
+            <div class="suggestions" id="suggestions"></div>
+        </div>
+
+        <div class="main-content">
+            <!-- Current Weather -->
+            <div class="current-weather" id="currentWeather">
+                <div class="placeholder">Enter a city to see weather</div>
+            </div>
+
+            <!-- 5-Day Forecast -->
+            <div class="forecast-section">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast-container" id="forecastContainer">
+                    <div class="placeholder">Forecast will appear here</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recently Searched Cities -->
+        <div class="recent-section">
+            <h3>Recently Searched</h3>
+            <div class="recent-cities" id="recentCities"></div>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message" id="errorMessage"></div>
+
+        <!-- Loading Indicator -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading weather data...</p>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
